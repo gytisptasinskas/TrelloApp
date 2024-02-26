@@ -7,7 +7,6 @@
 
 import Foundation
 import Alamofire
-import Combine
 
 @MainActor
 class AuthViewModel: ObservableObject {
@@ -15,7 +14,6 @@ class AuthViewModel: ObservableObject {
     @Published var isAuthenticated = false
     private var authService = AuthService()
     private let tokenStorage = TokenStorage()
-    private var cancellables = Set<AnyCancellable>()
     
     init() {
         Task {

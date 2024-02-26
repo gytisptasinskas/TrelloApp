@@ -9,17 +9,28 @@ import SwiftUI
 
 struct AuthView: View {
     @StateObject private var viewModel = AuthViewModel()
-
+    @State private var isAuthenticating = false
+    @State private var shouldAuthenticate = false
+    
     var body: some View {
         VStack {
             if viewModel.isAuthenticated {
-                EmptyView()
+                BoardsView()
             } else {
-                Button("Authenticate with Trello") {
-                    Task {
-                        await viewModel.authenticateWithTrello()
+                ContentUnavailableView("You don't have any boards to display", image: "no-content")
+                    .task {
+                        if shouldAuthenticate && !isAuthenticating {
+                            isAuthenticating = true
+                            await viewModel.authenticateWithTrello()
+                            isAuthenticating = false
+                            shouldAuthenticate = false
+                        }
                     }
-                }
+            }
+        }
+        .onChange(of: viewModel.isAuthenticated) { isAuthenticated in
+            if !isAuthenticated {
+                shouldAuthenticate = true
             }
         }
     }

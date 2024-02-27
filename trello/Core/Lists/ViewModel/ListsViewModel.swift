@@ -14,7 +14,11 @@ class ListsViewModel: ObservableObject {
     @Published var errorMessage: String?
     @Published var state: ViewState = .loading
 
-    private var service = TrelloService()
+    var service: TrelloServiceProtocol
+    
+    init(service: TrelloServiceProtocol) {
+        self.service = service
+    }
     
     func fetchLists(forBoard boardId: String) async {
         state = .loading
@@ -34,7 +38,7 @@ class ListsViewModel: ObservableObject {
     }
 }
 
-enum ViewState {
+enum ViewState: Equatable {
     case loading
     case success
     case failure(String)

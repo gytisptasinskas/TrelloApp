@@ -26,6 +26,11 @@ struct AuthView: View {
                             shouldAuthenticate = false
                         }
                     }
+                    .onTapGesture {
+                        Task {
+                           await viewModel.authenticateWithTrello()
+                        }
+                    }
             }
         }
         .onChange(of: viewModel.isAuthenticated) { isAuthenticated in

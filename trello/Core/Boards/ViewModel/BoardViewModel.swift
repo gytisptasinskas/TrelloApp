@@ -19,7 +19,11 @@ class BoardViewModel: ObservableObject {
         }
     }
     
-    private var service = TrelloService()
+    var service: TrelloServiceProtocol
+    
+    init(service: TrelloServiceProtocol) {
+        self.service = service
+    }
     
     func fetchBoards() {
         isLoading = true

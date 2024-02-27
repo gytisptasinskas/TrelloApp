@@ -24,6 +24,7 @@ class AuthViewModel: ObservableObject {
     func authenticateIfPossible() async {
         guard let token = tokenStorage.retrieveToken(), !token.isEmpty else {
             self.isAuthenticated = false
+            await authenticateWithTrello()
             return
         }
         validateToken(token)

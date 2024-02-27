@@ -1,0 +1,17 @@
+{
+  "id": "card1",
+  "name": "Test Card",
+  "desc": "Description",
+  "labels": [
+    {
+      "id": "label1",
+      "name": "Urgent",
+      "color": "red"
+    },
+    {
+      "id": "label2",
+      "name": "Bug",
+      "color": "green"
+    }
+  ]
+}

@@ -8,7 +8,7 @@
 import Foundation
 import Alamofire
 
-class TrelloService {
+class TrelloService: TrelloServiceProtocol {
     private let baseURL = "https://api.trello.com/1"
     
     let apiKey = ProcessInfo.processInfo.environment["API_KEY"] ?? ""
@@ -35,8 +35,7 @@ class TrelloService {
             let url = "\(baseURL)/boards/\(boardId)/lists"
             let parameters: [String: String] = ["key": apiKey, "token": token, "cards": "all"]
 
-            let lists: [Lists] = try await AF.request(url, parameters: parameters).serializingDecodable([Lists].self).value
-            return lists
+            return try await AF.request(url, parameters: parameters).serializingDecodable([Lists].self).value
         }
     
     // MARK: - Card Functions
@@ -48,8 +47,7 @@ class TrelloService {
         let url = "\(baseURL)/cards/\(cardId)"
         let parameters: [String: String] = ["key": apiKey, "token": token]
         
-        let card: Card = try await AF.request(url, parameters: parameters).serializingDecodable(Card.self).value
-        return card
+        return try await AF.request(url, parameters: parameters).serializingDecodable(Card.self).value
     }
     
     func deleteCard(card cardId: String) async throws {
@@ -72,7 +70,7 @@ class TrelloService {
         let parameters: [String: String] = ["key": apiKey, "token": token, "desc": newDescription]
 
         do {
-            let response = try await AF.request(url, method: .put, parameters: parameters, encoder: URLEncodedFormParameterEncoder.default).validate().serializingDecodable(Card.self).value
+            _ = try await AF.request(url, method: .put, parameters: parameters, encoder: URLEncodedFormParameterEncoder.default).validate().serializingDecodable(Card.self).value
         } catch {
             throw error
         }

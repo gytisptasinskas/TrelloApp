@@ -7,21 +7,14 @@
 
 import Foundation
 
-struct Lists: Codable, Identifiable {
+struct Lists: Codable, Identifiable, Equatable {    
     let id: String
     let name: String
     var cards: [Card]?
-}
-
-struct Card: Identifiable, Codable {
-    let id: String
-    let name: String
-    let labels: [Label]
-    let desc: String
     
-    struct Label: Identifiable, Codable {
-        let id: String
-        let name: String
-        let color: String
+    init(id: String, name: String, cards: [Card]? = nil) {
+        self.id = id
+        self.name = name
+        self.cards = cards
     }
 }

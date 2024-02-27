@@ -16,7 +16,11 @@ class CardViewModel: ObservableObject {
     @Published var cardLabels: [String] = []
     @Published var isAlertShowned = false
     
-    private var service = TrelloService()
+    var service: TrelloServiceProtocol
+    
+    init(service: TrelloServiceProtocol) {
+        self.service = service
+    }
     
     func fetchCard(cardId: String) async {
         isLoading = true
@@ -25,7 +29,7 @@ class CardViewModel: ObservableObject {
             let fetchedCard = try await service.fetchCard(card: cardId)
             self.card = fetchedCard
             self.descriptionText = fetchedCard.desc
-            self.cardLabels = fetchedCard.labels.map { $0.name }
+            self.cardLabels = fetchedCard.labels?.map { $0.name } ?? []
             self.isLoading = false
         } catch {
             self.errorMessage = error.localizedDescription

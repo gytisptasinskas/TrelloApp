@@ -1,0 +1,52 @@
+{
+  "configurations" : [
+    {
+      "id" : "CF912B42-D836-4370-B2B5-B1CE8CD21FDC",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "codeCoverage" : {
+      "targets" : [
+        {
+          "containerPath" : "container:trello.xcodeproj",
+          "identifier" : "4878184E2B8CC3C9009CB413",
+          "name" : "trello"
+        }
+      ]
+    },
+    "environmentVariableEntries" : [
+      {
+        "key" : "API_KEY",
+        "value" : "60a9ddf1cbb4c72e8720472da57227cb"
+      }
+    ],
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:trello.xcodeproj",
+      "identifier" : "4878184E2B8CC3C9009CB413",
+      "name" : "trello"
+    }
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:trello.xcodeproj",
+        "identifier" : "4878185E2B8CC3D0009CB413",
+        "name" : "trelloTests"
+      }
+    },
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:trello.xcodeproj",
+        "identifier" : "487818682B8CC3D0009CB413",
+        "name" : "trelloUITests"
+      }
+    }
+  ],
+  "version" : 1
+}

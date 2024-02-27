@@ -14,10 +14,8 @@ class AuthService: NSObject, ASWebAuthenticationPresentationContextProviding {
     private let callbackScheme = "trelloapp"
     
     func authenticateWithTrello() async throws -> String {
-        // Ensure the entire block runs on the main thread
         return try await withCheckedThrowingContinuation { continuation in
             DispatchQueue.main.async {
-                // Now this entire closure is guaranteed to run on the main thread
                 let scope = "read,write"
                 let callbackURL = "\(self.callbackScheme)://callback"
                 let callbackMethod = "fragment"

@@ -42,5 +42,3 @@ struct ListsView: View {
 #Preview {
     ListsView(board: Board(id: "1", name: "iOS", lists: []))
 }
-
-

@@ -13,7 +13,7 @@ struct Board: Codable, Identifiable, Equatable {
     let name: String
     let lists: [Lists]?
     
-    init(id: String, name: String, lists: [Lists]?) {
+    init(id: String, name: String, lists: [Lists]? = nil) {
         self.id = id
         self.name = name
         self.lists = lists

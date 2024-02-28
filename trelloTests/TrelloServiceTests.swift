@@ -9,6 +9,7 @@ import XCTest
 @testable import trello
 import OHHTTPStubsSwift
 import OHHTTPStubs
+import Alamofire
 
 class TrelloServiceTests: XCTestCase {
     var trelloService: TrelloService!
@@ -17,6 +18,7 @@ class TrelloServiceTests: XCTestCase {
         super.setUp()
         trelloService = TrelloService()
         
+        // MARK: - Stubs
         // Stub for fetchBoards
         stub(condition: isHost("api.trello.com") && isPath("/1/members/me/boards")) { _ in
             guard let stubPath = OHPathForFile("boardResponse.json", type(of: self).self) else {
@@ -58,11 +60,14 @@ class TrelloServiceTests: XCTestCase {
         }
     }
 
+    // MARK: - Tear Down
     override func tearDown() {
         HTTPStubs.removeAllStubs()
         super.tearDown()
     }
     
+    // MARK: - Tests
+    // MARK: - Board Functions
     func testFetchBoardsSuccess() async throws {
         do {
             let boards = try await trelloService.fetchBoards()
@@ -73,6 +78,29 @@ class TrelloServiceTests: XCTestCase {
         }
     }
     
+    func testFetchBoardsFailureNetworkError() async throws {
+        // Stub to simulate a network error
+        stub(condition: isHost("api.trello.com") && isPath("/1/members/me/boards")) { _ in
+            let error = NSError(domain: NSURLErrorDomain, code: URLError.networkConnectionLost.rawValue, userInfo: nil)
+            return HTTPStubsResponse(error: error)
+        }
+        
+        do {
+            let _ = try await trelloService.fetchBoards()
+            XCTFail("Expected network error to be thrown")
+        } catch let error as AFError {
+            if let underlyingError = error.underlyingError as NSError? {
+                XCTAssertEqual(underlyingError.domain, NSURLErrorDomain)
+                XCTAssertEqual(underlyingError.code, URLError.networkConnectionLost.rawValue)
+            } else {
+                XCTFail("Expected underlying NSError")
+            }
+        } catch {
+            XCTFail("Expected AFError")
+        }
+    }
+    
+    // MARK: - Board Lists
     func testFetchListsSuccess() async throws {
         do {
             let lists = try await trelloService.fetchLists(board: "1")
@@ -83,6 +111,32 @@ class TrelloServiceTests: XCTestCase {
         }
     }
     
+    func testFetchListsFailureInvalidJSON() async throws {
+        // Stub to return invalid JSON
+        stub(condition: isHost("api.trello.com") && isPath("/1/boards/1/lists")) { _ in
+            let notJSONData = "Invalid JSON".data(using: .utf8)!
+            return HTTPStubsResponse(data: notJSONData, statusCode: 200, headers: ["Content-Type": "application/json"])
+        }
+
+        do {
+            let _ = try await trelloService.fetchLists(board: "1")
+            XCTFail("Expected JSON parsing error to be thrown")
+        } catch let error as AFError {
+            switch error {
+            case .responseSerializationFailed(let reason):
+                switch reason {
+                case .decodingFailed(let error as DecodingError):
+                    XCTAssertTrue(true, "Caught DecodingError as expected")
+                default:
+                    XCTFail("Expected a DecodingError but got \(error)")
+                }
+            default:
+                XCTFail("Expected a responseSerializationFailed error but got \(error)")
+            }
+        }
+    }
+    
+    // MARK: - Card Functions
     func testFetchCardSuccess() async throws {
         do {
             let card = try await trelloService.fetchCard(card: "card1")
@@ -108,6 +162,23 @@ class TrelloServiceTests: XCTestCase {
             try await trelloService.updateCardDescription(cardId: "card1", newDescription: "Updated Description")
         } catch {
             XCTFail("Updating card description failed with error: \(error)")
+        }
+    }
+    
+    func testUpdateCardDescriptionFailureHTTPError() async throws {
+        // Stub to simulate a 404 Not Found error
+        stub(condition: isHost("api.trello.com") && isPath("/1/cards/card1") && isMethodPUT()) { _ in
+            return HTTPStubsResponse(data: Data(), statusCode: 404, headers: ["Content-Type": "application/json"])
+        }
+        
+        do {
+            try await trelloService.updateCardDescription(cardId: "card1", newDescription: "Updated Description")
+            XCTFail("Expected HTTP 404 error to be thrown")
+        } catch {
+            // Assert that an HTTP error occurred
+            let afError = error as? AFError
+            let statusCode = afError?.responseCode
+            XCTAssertEqual(statusCode, 404, "Expected HTTP status code 404 but got \(String(describing: statusCode))")
         }
     }
 }

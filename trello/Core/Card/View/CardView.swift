@@ -39,7 +39,6 @@ struct CardView: View {
                         ToolbarItemGroup(placement: .keyboard) {
                             Button("Save") {
                                 Task {
-                                    print("MESSAGE WAS SENT")
                                     await viewModel.updateDescription(cardId: card.id, newDescription: viewModel.descriptionText)
                                 }
                             }
@@ -55,7 +54,6 @@ struct CardView: View {
             }
             .task {
                 await viewModel.fetchCard(cardId: card.id)
-                print("CARD ID: \(card.id)")
             }
             .alert("Are you sure?", isPresented: $viewModel.isAlertShowned) {
                 Button("Delete", role: .destructive) {

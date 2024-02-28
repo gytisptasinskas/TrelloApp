@@ -16,6 +16,7 @@ final class BoardViewModelTests: XCTestCase {
     var mockService: MockTrelloService!
     private var cancellables: Set<AnyCancellable> = []
     
+    // MARK: - Setup
     override func setUp() {
         super.setUp()
         mockService = MockTrelloService()
@@ -29,6 +30,7 @@ final class BoardViewModelTests: XCTestCase {
         viewModel.filteredBoards = viewModel.boards
     }
     
+    // MARK: - Tear Down
     override func tearDown() {
         super.tearDown()
         viewModel = nil
@@ -36,6 +38,7 @@ final class BoardViewModelTests: XCTestCase {
         cancellables.removeAll()
     }
     
+    // MARK: - Tests
     func testFetchBoardsSuccessfully() async {
         let expectation = XCTestExpectation(description: "Fetch boards completes")
         
@@ -55,6 +58,28 @@ final class BoardViewModelTests: XCTestCase {
         XCTAssertFalse(viewModel.isLoading, "ViewModel should not be loading after fetching boards.")
         XCTAssertFalse(viewModel.boards.isEmpty, "Boards array should contain elements.")
         XCTAssertNil(viewModel.errorMessage, "There should be no error message after successful fetching.")
+    }
+    
+    func testFetchBoardsFailure() async {
+        // Simulate failure
+        mockService.shouldFetchBoardsFail = true
+
+        let expectation = XCTestExpectation(description: "Fetch boards fails and sets error message")
+        
+        viewModel.$errorMessage
+            .dropFirst()
+            .sink { errorMessage in
+                if errorMessage != nil {
+                    expectation.fulfill()
+                }
+            }
+            .store(in: &cancellables)
+        
+        viewModel.fetchBoards()
+        
+        await fulfillment(of: [expectation], timeout: 1.0)
+        
+        XCTAssertNotNil(viewModel.errorMessage, "Error message should be set after fetch failure.")
     }
     
     func testFilterBoardsWithSearchText() {

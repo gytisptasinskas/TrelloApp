@@ -22,9 +22,9 @@ final class BoardViewModelTests: XCTestCase {
         viewModel = BoardViewModel(service: mockService)
         
         viewModel.boards = [
-            Board(id: "1", name: "Test Board"),
-            Board(id: "2", name: "Another Test Board"),
-            Board(id: "3", name: "Board Test")
+            Board(id: "1", name: "Test Board", lists: []),
+            Board(id: "2", name: "Another Test Board", lists: []),
+            Board(id: "3", name: "Board Test", lists: [])
         ]
         viewModel.filteredBoards = viewModel.boards
     }

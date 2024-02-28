@@ -20,11 +20,11 @@ class ListsViewModel: ObservableObject {
         self.service = service
     }
     
-    func fetchLists(forBoard boardId: String) async {
+    func fetchLists(board boardId: String) async {
         state = .loading
         
         do {
-            let fetchedLists = try await service.fetchLists(forBoard: boardId)
+            let fetchedLists = try await service.fetchLists(board: boardId)
             if fetchedLists.isEmpty {
                 state = .empty
             } else {

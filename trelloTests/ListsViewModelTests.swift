@@ -28,7 +28,7 @@ final class ListsViewModelTests: XCTestCase {
     }
     
     func testFetchListsSuccessfully() async {
-        await viewModel.fetchLists(forBoard: "1")
+        await viewModel.fetchLists(board: "1")
 
         XCTAssertFalse(viewModel.lists.isEmpty, "Lists should not be empty after successful fetch.")
         XCTAssertEqual(viewModel.state, .success, "State should be .success after successful fetch.")

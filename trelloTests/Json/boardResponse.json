@@ -1,14 +1,53 @@
 [
-  {
-    "id": "1",
-    "name": "Test Board"
-  },
-  {
-    "id": "2",
-    "name": "Another Test Board"
-  },
-  {
-    "id": "3",
-    "name": "Board Test"
-  }
+    {
+        "id": "1",
+        "name": "Test Board",
+        "lists": [
+            {
+                "id": "11",
+                "name": "To Do",
+                "cards": [
+                    {
+                        "id": "111",
+                        "name": "Task 1",
+                        "desc": "Description of Task 1",
+                        "labels": [
+                            {
+                                "id": "label1",
+                                "name": "Urgent",
+                                "color": "red"
+                            },
+                            {
+                                "id": "label2",
+                                "name": "Bug",
+                                "color": "green"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "112",
+                        "name": "Task 2",
+                        "desc": "Description of Task 2",
+                        "labels": [
+                            {
+                                "id": "label3",
+                                "name": "Feature",
+                                "color": "blue"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "12",
+                "name": "Done",
+                "cards": []
+            }
+        ]
+    },
+    {
+        "id": "2",
+        "name": "Another Test Board",
+        "lists": []
+    }
 ]

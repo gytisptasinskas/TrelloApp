@@ -33,14 +33,14 @@ struct ListsView: View {
         .navigationBarTitleDisplayMode(.inline)
         .onAppear {
             Task {
-                await viewModel.fetchLists(forBoard: board.id)
+                await viewModel.fetchLists(board: board.id)
             }
         }
     }
 }
 
 #Preview {
-    ListsView(board: Board(id: "1", name: "iOS"))
+    ListsView(board: Board(id: "1", name: "iOS", lists: []))
 }
 
 

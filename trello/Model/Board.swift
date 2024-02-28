@@ -11,9 +11,11 @@ import Foundation
 struct Board: Codable, Identifiable, Equatable {
     let id: String
     let name: String
+    let lists: [Lists]?
     
-    init(id: String, name: String) {
-         self.id = id
-         self.name = name
-     }
+    init(id: String, name: String, lists: [Lists]?) {
+        self.id = id
+        self.name = name
+        self.lists = lists
+    }
 }

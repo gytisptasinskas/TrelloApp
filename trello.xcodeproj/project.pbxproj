@@ -39,6 +39,8 @@
 		48CE6ED02B8DF4BB00243E0F /* BoardViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48CE6ECF2B8DF4BB00243E0F /* BoardViewModelTests.swift */; };
 		48CE6ED22B8E054D00243E0F /* ListsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48CE6ED12B8E054D00243E0F /* ListsViewModelTests.swift */; };
 		48CE6ED42B8E076000243E0F /* CardViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48CE6ED32B8E076000243E0F /* CardViewModelTests.swift */; };
+		48DF93842B8F1BB200A46085 /* OHHTTPStubs in Frameworks */ = {isa = PBXBuildFile; productRef = 48DF93832B8F1BB200A46085 /* OHHTTPStubs */; };
+		48DF93862B8F1BB200A46085 /* OHHTTPStubsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 48DF93852B8F1BB200A46085 /* OHHTTPStubsSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,6 +104,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48DF93842B8F1BB200A46085 /* OHHTTPStubs in Frameworks */,
+				48DF93862B8F1BB200A46085 /* OHHTTPStubsSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -157,8 +161,8 @@
 			children = (
 				48CE6EC52B8DE33D00243E0F /* Json */,
 				48CE6EC22B8DD21F00243E0F /* MockTrelloService.swift */,
-				48CE6EC12B8DD21F00243E0F /* TrelloServiceTests.swift */,
 				48CE6ECC2B8DE3DC00243E0F /* Mockable.swift */,
+				48CE6EC12B8DD21F00243E0F /* TrelloServiceTests.swift */,
 				48CE6ECF2B8DF4BB00243E0F /* BoardViewModelTests.swift */,
 				48CE6ED12B8E054D00243E0F /* ListsViewModelTests.swift */,
 				48CE6ED32B8E076000243E0F /* CardViewModelTests.swift */,
@@ -378,6 +382,10 @@
 				487818612B8CC3D0009CB413 /* PBXTargetDependency */,
 			);
 			name = trelloTests;
+			packageProductDependencies = (
+				48DF93832B8F1BB200A46085 /* OHHTTPStubs */,
+				48DF93852B8F1BB200A46085 /* OHHTTPStubsSwift */,
+			);
 			productName = trelloTests;
 			productReference = 4878185F2B8CC3D0009CB413 /* trelloTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -413,6 +421,7 @@
 			packageReferences = (
 				487818822B8CC480009CB413 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				487818852B8CC487009CB413 /* XCRemoteSwiftPackageReference "KeychainAccess" */,
+				48DF93822B8F1BB200A46085 /* XCRemoteSwiftPackageReference "OHHTTPStubs" */,
 			);
 			productRefGroup = 487818502B8CC3C9009CB413 /* Products */;
 			projectDirPath = "";
@@ -761,6 +770,14 @@
 				kind = branch;
 			};
 		};
+		48DF93822B8F1BB200A46085 /* XCRemoteSwiftPackageReference "OHHTTPStubs" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AliSoftware/OHHTTPStubs";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.1.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -773,6 +790,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 487818852B8CC487009CB413 /* XCRemoteSwiftPackageReference "KeychainAccess" */;
 			productName = KeychainAccess;
+		};
+		48DF93832B8F1BB200A46085 /* OHHTTPStubs */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 48DF93822B8F1BB200A46085 /* XCRemoteSwiftPackageReference "OHHTTPStubs" */;
+			productName = OHHTTPStubs;
+		};
+		48DF93852B8F1BB200A46085 /* OHHTTPStubsSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 48DF93822B8F1BB200A46085 /* XCRemoteSwiftPackageReference "OHHTTPStubs" */;
+			productName = OHHTTPStubsSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

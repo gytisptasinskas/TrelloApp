@@ -15,12 +15,10 @@ protocol Mockable: AnyObject {
 
 extension Mockable {
     var bundle: Bundle {
-        // Correctly reference the test bundle
         return Bundle(for: type(of: self))
     }
     
     func loadJson<T: Decodable>(filename fileName: String, type: T.Type) throws -> T {
-        // Use the corrected bundle reference here
         guard let url = bundle.url(forResource: fileName, withExtension: "json") else {
             throw NSError(domain: "FileNotFound", code: 404, userInfo: nil)
         }

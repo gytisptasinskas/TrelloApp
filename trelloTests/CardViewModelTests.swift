@@ -32,7 +32,7 @@ final class CardViewModelTests: XCTestCase {
 
         let expectedLabels = ["Urgent", "Bug"]
         XCTAssertEqual(viewModel.card?.id, "card1", "The fetched card ID should match.")
-        XCTAssertEqual(viewModel.descriptionText, "Description", "Description text should be updated correctly.")
+        XCTAssertEqual(viewModel.descriptionText, "Description of Task 1", "Description text should be updated correctly.")
         XCTAssertEqual(viewModel.cardLabels, expectedLabels, "Card labels should be updated correctly.")
     }
 

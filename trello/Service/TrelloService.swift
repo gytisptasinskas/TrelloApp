@@ -10,7 +10,6 @@ import Alamofire
 
 class TrelloService: TrelloServiceProtocol {
     private let baseURL = "https://api.trello.com/1"
-    
     let apiKey = ProcessInfo.processInfo.environment["API_KEY"] ?? ""
     let token = TokenStorage().retrieveToken()
     
@@ -27,7 +26,7 @@ class TrelloService: TrelloServiceProtocol {
     }
     
     // MARK: - List Functions
-    func fetchLists(forBoard boardId: String) async throws -> [Lists] {
+    func fetchLists(board boardId: String) async throws -> [Lists] {
             guard let token = token else {
                 throw NSError(domain: "", code: 0, userInfo: [NSLocalizedDescriptionKey: "Authentication token is missing"])
             }

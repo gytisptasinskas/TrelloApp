@@ -17,7 +17,7 @@ struct CardRowView: View {
                 .frame(maxWidth: .infinity, alignment: .center)
             
             HStack(spacing: 5) {
-                ForEach(card.labels, id: \.id) { label in
+                ForEach(card.labels ?? [], id: \.id) { label in
                     Circle()
                         .frame(width: 20, height: 20)
                         .foregroundColor(Color.trelloColor(named: label.color.capitalized))

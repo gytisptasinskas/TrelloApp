@@ -8,9 +8,8 @@
 import Foundation
 import Alamofire
 
-class TrelloService {
+class TrelloService: TrelloServiceProtocol {
     private let baseURL = "https://api.trello.com/1"
-    
     let apiKey = ProcessInfo.processInfo.environment["API_KEY"] ?? ""
     let token = TokenStorage().retrieveToken()
     
@@ -27,7 +26,7 @@ class TrelloService {
     }
     
     // MARK: - List Functions
-    func fetchLists(forBoard boardId: String) async throws -> [Lists] {
+    func fetchLists(board boardId: String) async throws -> [Lists] {
             guard let token = token else {
                 throw NSError(domain: "", code: 0, userInfo: [NSLocalizedDescriptionKey: "Authentication token is missing"])
             }
@@ -35,8 +34,7 @@ class TrelloService {
             let url = "\(baseURL)/boards/\(boardId)/lists"
             let parameters: [String: String] = ["key": apiKey, "token": token, "cards": "all"]
 
-            let lists: [Lists] = try await AF.request(url, parameters: parameters).serializingDecodable([Lists].self).value
-            return lists
+            return try await AF.request(url, parameters: parameters).serializingDecodable([Lists].self).value
         }
     
     // MARK: - Card Functions
@@ -48,8 +46,7 @@ class TrelloService {
         let url = "\(baseURL)/cards/\(cardId)"
         let parameters: [String: String] = ["key": apiKey, "token": token]
         
-        let card: Card = try await AF.request(url, parameters: parameters).serializingDecodable(Card.self).value
-        return card
+        return try await AF.request(url, parameters: parameters).serializingDecodable(Card.self).value
     }
     
     func deleteCard(card cardId: String) async throws {
@@ -72,7 +69,7 @@ class TrelloService {
         let parameters: [String: String] = ["key": apiKey, "token": token, "desc": newDescription]
 
         do {
-            let response = try await AF.request(url, method: .put, parameters: parameters, encoder: URLEncodedFormParameterEncoder.default).validate().serializingDecodable(Card.self).value
+            _ = try await AF.request(url, method: .put, parameters: parameters, encoder: URLEncodedFormParameterEncoder.default).validate().serializingDecodable(Card.self).value
         } catch {
             throw error
         }

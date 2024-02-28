@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct BoardsView: View {
-    @StateObject private var viewModel = BoardViewModel()
+    @StateObject private var viewModel = BoardViewModel(service: TrelloService())
+    
     var body: some View {
         NavigationStack {
             VStack {

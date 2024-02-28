@@ -14,13 +14,17 @@ class ListsViewModel: ObservableObject {
     @Published var errorMessage: String?
     @Published var state: ViewState = .loading
 
-    private var service = TrelloService()
+    var service: TrelloServiceProtocol
     
-    func fetchLists(forBoard boardId: String) async {
+    init(service: TrelloServiceProtocol) {
+        self.service = service
+    }
+    
+    func fetchLists(board boardId: String) async {
         state = .loading
         
         do {
-            let fetchedLists = try await service.fetchLists(forBoard: boardId)
+            let fetchedLists = try await service.fetchLists(board: boardId)
             if fetchedLists.isEmpty {
                 state = .empty
             } else {
@@ -34,7 +38,7 @@ class ListsViewModel: ObservableObject {
     }
 }
 
-enum ViewState {
+enum ViewState: Equatable {
     case loading
     case success
     case failure(String)

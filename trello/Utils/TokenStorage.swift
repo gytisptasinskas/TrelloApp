@@ -22,8 +22,7 @@ class TokenStorage {
      func retrieveToken() -> String? {
          do {
              let token = try keychain.get("oauthToken")
-             if let token = token {
-                 
+             if token != nil {
              } else {
                  print("No token found in Keychain")
              }

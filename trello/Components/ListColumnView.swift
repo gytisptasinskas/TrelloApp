@@ -34,6 +34,6 @@ struct ListColumnView: View {
     }
 }
 
-//#Preview {
-//    ListRowView(list: [])
-//}
+#Preview {
+    ListColumnView(list: [Lists(id: "1", name: "iOS", cards: [Card(id: "1", name: "Test Card", labels: [], desc: "iOS")])])
+}

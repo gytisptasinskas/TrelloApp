@@ -9,8 +9,9 @@ import SwiftUI
 
 struct CardView: View {
     let card: Card
-    @StateObject private var viewModel = CardViewModel()
+    @StateObject private var viewModel = CardViewModel(service: TrelloService())
     @Environment(\.dismiss) var dismiss
+    
     var body: some View {
         NavigationStack {
             VStack(alignment: .leading) {
@@ -20,7 +21,7 @@ struct CardView: View {
                 
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack {
-                        ForEach(card.labels) { label in
+                        ForEach(card.labels ?? []) { label in
                             Text(label.name)
                                 .padding(8)
                                 .background(Color.trelloColor(named: label.color.capitalized))
@@ -38,7 +39,6 @@ struct CardView: View {
                         ToolbarItemGroup(placement: .keyboard) {
                             Button("Save") {
                                 Task {
-                                    print("MESSAGE WAS SENT")
                                     await viewModel.updateDescription(cardId: card.id, newDescription: viewModel.descriptionText)
                                 }
                             }
@@ -54,7 +54,6 @@ struct CardView: View {
             }
             .task {
                 await viewModel.fetchCard(cardId: card.id)
-                print("CARD ID: \(card.id)")
             }
             .alert("Are you sure?", isPresented: $viewModel.isAlertShowned) {
                 Button("Delete", role: .destructive) {
@@ -87,6 +86,6 @@ struct CardView: View {
     }
 }
 
-//#Preview {
-//    CardView(card: Card())
-//}
+#Preview {
+    CardView(card: Card(id: "1", name: "Test Card", labels: [], desc: "Test description"))
+}

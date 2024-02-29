@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct AuthView: View {
-    @StateObject private var viewModel = AuthViewModel()
+    @StateObject private var viewModel = AuthViewModel(service: AuthService(webAuthSession: WebAuthSession()), tokenStorage: TokenStorage())
     @State private var isAuthenticating = false
     @State private var shouldAuthenticate = false
     

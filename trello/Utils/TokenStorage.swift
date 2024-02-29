@@ -8,7 +8,7 @@
 import Foundation
 import KeychainAccess
 
-class TokenStorage {
+class TokenStorage: TokenStorageProtocol {
     private let keychain = Keychain(service: "com.gytisptasinskas.trello")
 
     func storeToken(_ token: String) {

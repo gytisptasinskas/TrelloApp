@@ -12,10 +12,12 @@ import Alamofire
 class AuthViewModel: ObservableObject {
     
     @Published var isAuthenticated = false
-    private var authService = AuthService()
-    private let tokenStorage = TokenStorage()
+    var service: AuthServiceProtocol
+    var tokenStorage: TokenStorageProtocol
     
-    init() {
+    init(service: AuthServiceProtocol, tokenStorage: TokenStorageProtocol) {
+        self.service = service
+        self.tokenStorage = tokenStorage
         Task {
             await authenticateIfPossible()
         }
@@ -32,7 +34,7 @@ class AuthViewModel: ObservableObject {
     
     func authenticateWithTrello() async {
         do {
-            let token = try await authService.authenticateWithTrello()
+            let token = try await service.authenticateWithTrello()
             tokenStorage.storeToken(token)
             self.isAuthenticated = true
         } catch {
@@ -40,7 +42,7 @@ class AuthViewModel: ObservableObject {
         }
     }
     
-    private func validateToken(_ token: String) {
+    func validateToken(_ token: String) {
         let url = "https://api.trello.com/1/members/me"
         let parameters: [String: String] = [
             "key": ProcessInfo.processInfo.environment["API_KEY"] ?? "",

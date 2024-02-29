@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		48487B6D2B90634600E2CAD7 /* WebAuthSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48487B6C2B90634600E2CAD7 /* WebAuthSessionProtocol.swift */; };
+		48487B6F2B90692700E2CAD7 /* MockAuthWebSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48487B6E2B90692700E2CAD7 /* MockAuthWebSession.swift */; };
 		487818572B8CC3CF009CB413 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 487818562B8CC3CF009CB413 /* Assets.xcassets */; };
 		4878185A2B8CC3CF009CB413 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 487818592B8CC3CF009CB413 /* Preview Assets.xcassets */; };
 		487818812B8CC473009CB413 /* TokenStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 487818802B8CC473009CB413 /* TokenStorage.swift */; };
@@ -41,6 +43,12 @@
 		48CE6ED42B8E076000243E0F /* CardViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48CE6ED32B8E076000243E0F /* CardViewModelTests.swift */; };
 		48DF93842B8F1BB200A46085 /* OHHTTPStubs in Frameworks */ = {isa = PBXBuildFile; productRef = 48DF93832B8F1BB200A46085 /* OHHTTPStubs */; };
 		48DF93862B8F1BB200A46085 /* OHHTTPStubsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 48DF93852B8F1BB200A46085 /* OHHTTPStubsSwift */; };
+		48DF938E2B8F687B00A46085 /* AuthServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48DF938D2B8F687B00A46085 /* AuthServiceProtocol.swift */; };
+		48DF93902B8F699200A46085 /* MockAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48DF938F2B8F699200A46085 /* MockAuthService.swift */; };
+		48DF93922B8F6A4B00A46085 /* AuthViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48DF93912B8F6A4B00A46085 /* AuthViewModelTests.swift */; };
+		48DF93942B8F6A7900A46085 /* TokenStorageProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48DF93932B8F6A7900A46085 /* TokenStorageProtocol.swift */; };
+		48DF93962B8F6B8200A46085 /* MockTokenStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48DF93952B8F6B8200A46085 /* MockTokenStorage.swift */; };
+		48DF93982B8F70EE00A46085 /* AuthServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48DF93972B8F70EE00A46085 /* AuthServiceTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +62,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		48487B6C2B90634600E2CAD7 /* WebAuthSessionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebAuthSessionProtocol.swift; sourceTree = "<group>"; };
+		48487B6E2B90692700E2CAD7 /* MockAuthWebSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAuthWebSession.swift; sourceTree = "<group>"; };
 		4878184F2B8CC3C9009CB413 /* trello.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = trello.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		487818562B8CC3CF009CB413 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		487818592B8CC3CF009CB413 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -88,6 +98,12 @@
 		48CE6ECF2B8DF4BB00243E0F /* BoardViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardViewModelTests.swift; sourceTree = "<group>"; };
 		48CE6ED12B8E054D00243E0F /* ListsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListsViewModelTests.swift; sourceTree = "<group>"; };
 		48CE6ED32B8E076000243E0F /* CardViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewModelTests.swift; sourceTree = "<group>"; };
+		48DF938D2B8F687B00A46085 /* AuthServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthServiceProtocol.swift; sourceTree = "<group>"; };
+		48DF938F2B8F699200A46085 /* MockAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAuthService.swift; sourceTree = "<group>"; };
+		48DF93912B8F6A4B00A46085 /* AuthViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModelTests.swift; sourceTree = "<group>"; };
+		48DF93932B8F6A7900A46085 /* TokenStorageProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenStorageProtocol.swift; sourceTree = "<group>"; };
+		48DF93952B8F6B8200A46085 /* MockTokenStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTokenStorage.swift; sourceTree = "<group>"; };
+		48DF93972B8F70EE00A46085 /* AuthServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthServiceTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +128,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		48487B702B90695300E2CAD7 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				48DF938F2B8F699200A46085 /* MockAuthService.swift */,
+				48487B6E2B90692700E2CAD7 /* MockAuthWebSession.swift */,
+				48CE6EC22B8DD21F00243E0F /* MockTrelloService.swift */,
+				48DF93952B8F6B8200A46085 /* MockTokenStorage.swift */,
+				48CE6ECC2B8DE3DC00243E0F /* Mockable.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
 		487818462B8CC3C9009CB413 = {
 			isa = PBXGroup;
 			children = (
@@ -159,13 +187,14 @@
 		487818622B8CC3D0009CB413 /* trelloTests */ = {
 			isa = PBXGroup;
 			children = (
+				48487B702B90695300E2CAD7 /* Mocks */,
 				48CE6EC52B8DE33D00243E0F /* Json */,
-				48CE6EC22B8DD21F00243E0F /* MockTrelloService.swift */,
-				48CE6ECC2B8DE3DC00243E0F /* Mockable.swift */,
+				48DF93972B8F70EE00A46085 /* AuthServiceTests.swift */,
 				48CE6EC12B8DD21F00243E0F /* TrelloServiceTests.swift */,
 				48CE6ECF2B8DF4BB00243E0F /* BoardViewModelTests.swift */,
 				48CE6ED12B8E054D00243E0F /* ListsViewModelTests.swift */,
 				48CE6ED32B8E076000243E0F /* CardViewModelTests.swift */,
+				48DF93912B8F6A4B00A46085 /* AuthViewModelTests.swift */,
 			);
 			path = trelloTests;
 			sourceTree = "<group>";
@@ -322,6 +351,9 @@
 			isa = PBXGroup;
 			children = (
 				48CE6EBC2B8DD20300243E0F /* TrelloServiceProtocol.swift */,
+				48DF938D2B8F687B00A46085 /* AuthServiceProtocol.swift */,
+				48DF93932B8F6A7900A46085 /* TokenStorageProtocol.swift */,
+				48487B6C2B90634600E2CAD7 /* WebAuthSessionProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -467,12 +499,15 @@
 				487818922B8CC4F9009CB413 /* AuthView.swift in Sources */,
 				4878189E2B8CC640009CB413 /* Lists.swift in Sources */,
 				487818A42B8CC67A009CB413 /* ListsViewModel.swift in Sources */,
+				48487B6D2B90634600E2CAD7 /* WebAuthSessionProtocol.swift in Sources */,
 				487818A62B8CC6A6009CB413 /* BoardsView.swift in Sources */,
 				487818892B8CC49F009CB413 /* TrelloColors.swift in Sources */,
 				487818902B8CC4E5009CB413 /* AuthViewModel.swift in Sources */,
 				487818992B8CC600009CB413 /* BoardViewModel.swift in Sources */,
 				487818B32B8CD1FB009CB413 /* ListColumnView.swift in Sources */,
+				48DF93942B8F6A7900A46085 /* TokenStorageProtocol.swift in Sources */,
 				4878188B2B8CC4B7009CB413 /* AuthService.swift in Sources */,
+				48DF938E2B8F687B00A46085 /* AuthServiceProtocol.swift in Sources */,
 				487818B12B8CCF7D009CB413 /* CardRowView.swift in Sources */,
 				487818942B8CC5D0009CB413 /* Board.swift in Sources */,
 				4878189B2B8CC61E009CB413 /* TrelloService.swift in Sources */,
@@ -486,10 +521,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48DF93902B8F699200A46085 /* MockAuthService.swift in Sources */,
 				48CE6EC32B8DD21F00243E0F /* TrelloServiceTests.swift in Sources */,
 				48CE6ED22B8E054D00243E0F /* ListsViewModelTests.swift in Sources */,
 				48CE6ED42B8E076000243E0F /* CardViewModelTests.swift in Sources */,
+				48DF93922B8F6A4B00A46085 /* AuthViewModelTests.swift in Sources */,
+				48DF93982B8F70EE00A46085 /* AuthServiceTests.swift in Sources */,
 				48CE6EC42B8DD21F00243E0F /* MockTrelloService.swift in Sources */,
+				48487B6F2B90692700E2CAD7 /* MockAuthWebSession.swift in Sources */,
+				48DF93962B8F6B8200A46085 /* MockTokenStorage.swift in Sources */,
 				48CE6ECD2B8DE3DC00243E0F /* Mockable.swift in Sources */,
 				48CE6ED02B8DF4BB00243E0F /* BoardViewModelTests.swift in Sources */,
 			);

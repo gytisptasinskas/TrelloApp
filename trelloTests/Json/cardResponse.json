@@ -1,0 +1,17 @@
+{
+    "id": "card1",
+    "name": "Task 1",
+    "desc": "Description of Task 1",
+    "labels": [
+        {
+            "id": "label1",
+            "name": "Urgent",
+            "color": "red"
+        },
+        {
+            "id": "label2",
+            "name": "Bug",
+            "color": "green"
+        }
+    ]
+}

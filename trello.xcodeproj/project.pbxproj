@@ -7,13 +7,48 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		487818532B8CC3C9009CB413 /* trelloApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 487818522B8CC3C9009CB413 /* trelloApp.swift */; };
-		487818552B8CC3C9009CB413 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 487818542B8CC3C9009CB413 /* ContentView.swift */; };
+		48487B6D2B90634600E2CAD7 /* WebAuthSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48487B6C2B90634600E2CAD7 /* WebAuthSessionProtocol.swift */; };
+		48487B6F2B90692700E2CAD7 /* MockAuthWebSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48487B6E2B90692700E2CAD7 /* MockAuthWebSession.swift */; };
 		487818572B8CC3CF009CB413 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 487818562B8CC3CF009CB413 /* Assets.xcassets */; };
 		4878185A2B8CC3CF009CB413 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 487818592B8CC3CF009CB413 /* Preview Assets.xcassets */; };
-		487818642B8CC3D0009CB413 /* trelloTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 487818632B8CC3D0009CB413 /* trelloTests.swift */; };
-		4878186E2B8CC3D0009CB413 /* trelloUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4878186D2B8CC3D0009CB413 /* trelloUITests.swift */; };
-		487818702B8CC3D0009CB413 /* trelloUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4878186F2B8CC3D0009CB413 /* trelloUITestsLaunchTests.swift */; };
+		487818812B8CC473009CB413 /* TokenStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 487818802B8CC473009CB413 /* TokenStorage.swift */; };
+		487818842B8CC480009CB413 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 487818832B8CC480009CB413 /* Alamofire */; };
+		487818872B8CC487009CB413 /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = 487818862B8CC487009CB413 /* KeychainAccess */; };
+		487818892B8CC49F009CB413 /* TrelloColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 487818882B8CC49F009CB413 /* TrelloColors.swift */; };
+		4878188B2B8CC4B7009CB413 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4878188A2B8CC4B7009CB413 /* AuthService.swift */; };
+		487818902B8CC4E5009CB413 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4878188F2B8CC4E5009CB413 /* AuthViewModel.swift */; };
+		487818922B8CC4F9009CB413 /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 487818912B8CC4F9009CB413 /* AuthView.swift */; };
+		487818942B8CC5D0009CB413 /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = 487818932B8CC5D0009CB413 /* Board.swift */; };
+		487818992B8CC600009CB413 /* BoardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 487818982B8CC600009CB413 /* BoardViewModel.swift */; };
+		4878189B2B8CC61E009CB413 /* TrelloService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4878189A2B8CC61E009CB413 /* TrelloService.swift */; };
+		4878189E2B8CC640009CB413 /* Lists.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4878189D2B8CC640009CB413 /* Lists.swift */; };
+		487818A22B8CC664009CB413 /* ListsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 487818A12B8CC664009CB413 /* ListsView.swift */; };
+		487818A42B8CC67A009CB413 /* ListsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 487818A32B8CC67A009CB413 /* ListsViewModel.swift */; };
+		487818A62B8CC6A6009CB413 /* BoardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 487818A52B8CC6A5009CB413 /* BoardsView.swift */; };
+		487818AB2B8CC6E2009CB413 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 487818AA2B8CC6E2009CB413 /* CardView.swift */; };
+		487818AD2B8CC6EF009CB413 /* CardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 487818AC2B8CC6EF009CB413 /* CardViewModel.swift */; };
+		487818B12B8CCF7D009CB413 /* CardRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 487818B02B8CCF7D009CB413 /* CardRowView.swift */; };
+		487818B32B8CD1FB009CB413 /* ListColumnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 487818B22B8CD1FB009CB413 /* ListColumnView.swift */; };
+		48CE6EB92B8DD18800243E0F /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48CE6EB82B8DD18800243E0F /* Card.swift */; };
+		48CE6EBD2B8DD20300243E0F /* TrelloServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48CE6EBC2B8DD20300243E0F /* TrelloServiceProtocol.swift */; };
+		48CE6EC02B8DD20E00243E0F /* trelloApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48CE6EBF2B8DD20D00243E0F /* trelloApp.swift */; };
+		48CE6EC32B8DD21F00243E0F /* TrelloServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48CE6EC12B8DD21F00243E0F /* TrelloServiceTests.swift */; };
+		48CE6EC42B8DD21F00243E0F /* MockTrelloService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48CE6EC22B8DD21F00243E0F /* MockTrelloService.swift */; };
+		48CE6EC72B8DE35400243E0F /* boardResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 48CE6EC62B8DE35400243E0F /* boardResponse.json */; };
+		48CE6EC92B8DE36500243E0F /* listResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 48CE6EC82B8DE36500243E0F /* listResponse.json */; };
+		48CE6ECB2B8DE37800243E0F /* cardResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 48CE6ECA2B8DE37800243E0F /* cardResponse.json */; };
+		48CE6ECD2B8DE3DC00243E0F /* Mockable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48CE6ECC2B8DE3DC00243E0F /* Mockable.swift */; };
+		48CE6ED02B8DF4BB00243E0F /* BoardViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48CE6ECF2B8DF4BB00243E0F /* BoardViewModelTests.swift */; };
+		48CE6ED22B8E054D00243E0F /* ListsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48CE6ED12B8E054D00243E0F /* ListsViewModelTests.swift */; };
+		48CE6ED42B8E076000243E0F /* CardViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48CE6ED32B8E076000243E0F /* CardViewModelTests.swift */; };
+		48DF93842B8F1BB200A46085 /* OHHTTPStubs in Frameworks */ = {isa = PBXBuildFile; productRef = 48DF93832B8F1BB200A46085 /* OHHTTPStubs */; };
+		48DF93862B8F1BB200A46085 /* OHHTTPStubsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 48DF93852B8F1BB200A46085 /* OHHTTPStubsSwift */; };
+		48DF938E2B8F687B00A46085 /* AuthServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48DF938D2B8F687B00A46085 /* AuthServiceProtocol.swift */; };
+		48DF93902B8F699200A46085 /* MockAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48DF938F2B8F699200A46085 /* MockAuthService.swift */; };
+		48DF93922B8F6A4B00A46085 /* AuthViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48DF93912B8F6A4B00A46085 /* AuthViewModelTests.swift */; };
+		48DF93942B8F6A7900A46085 /* TokenStorageProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48DF93932B8F6A7900A46085 /* TokenStorageProtocol.swift */; };
+		48DF93962B8F6B8200A46085 /* MockTokenStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48DF93952B8F6B8200A46085 /* MockTokenStorage.swift */; };
+		48DF93982B8F70EE00A46085 /* AuthServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48DF93972B8F70EE00A46085 /* AuthServiceTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -24,26 +59,51 @@
 			remoteGlobalIDString = 4878184E2B8CC3C9009CB413;
 			remoteInfo = trello;
 		};
-		4878186A2B8CC3D0009CB413 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 487818472B8CC3C9009CB413 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 4878184E2B8CC3C9009CB413;
-			remoteInfo = trello;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		48487B6C2B90634600E2CAD7 /* WebAuthSessionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebAuthSessionProtocol.swift; sourceTree = "<group>"; };
+		48487B6E2B90692700E2CAD7 /* MockAuthWebSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAuthWebSession.swift; sourceTree = "<group>"; };
 		4878184F2B8CC3C9009CB413 /* trello.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = trello.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		487818522B8CC3C9009CB413 /* trelloApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = trelloApp.swift; sourceTree = "<group>"; };
-		487818542B8CC3C9009CB413 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		487818562B8CC3CF009CB413 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		487818592B8CC3CF009CB413 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4878185F2B8CC3D0009CB413 /* trelloTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = trelloTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		487818632B8CC3D0009CB413 /* trelloTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = trelloTests.swift; sourceTree = "<group>"; };
-		487818692B8CC3D0009CB413 /* trelloUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = trelloUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		4878186D2B8CC3D0009CB413 /* trelloUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = trelloUITests.swift; sourceTree = "<group>"; };
-		4878186F2B8CC3D0009CB413 /* trelloUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = trelloUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		487818802B8CC473009CB413 /* TokenStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenStorage.swift; sourceTree = "<group>"; };
+		487818882B8CC49F009CB413 /* TrelloColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrelloColors.swift; sourceTree = "<group>"; };
+		4878188A2B8CC4B7009CB413 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		4878188F2B8CC4E5009CB413 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		487818912B8CC4F9009CB413 /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
+		487818932B8CC5D0009CB413 /* Board.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
+		487818982B8CC600009CB413 /* BoardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardViewModel.swift; sourceTree = "<group>"; };
+		4878189A2B8CC61E009CB413 /* TrelloService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrelloService.swift; sourceTree = "<group>"; };
+		4878189D2B8CC640009CB413 /* Lists.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lists.swift; sourceTree = "<group>"; };
+		487818A12B8CC664009CB413 /* ListsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListsView.swift; sourceTree = "<group>"; };
+		487818A32B8CC67A009CB413 /* ListsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListsViewModel.swift; sourceTree = "<group>"; };
+		487818A52B8CC6A5009CB413 /* BoardsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardsView.swift; sourceTree = "<group>"; };
+		487818AA2B8CC6E2009CB413 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		487818AC2B8CC6EF009CB413 /* CardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewModel.swift; sourceTree = "<group>"; };
+		487818AE2B8CC70B009CB413 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		487818B02B8CCF7D009CB413 /* CardRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardRowView.swift; sourceTree = "<group>"; };
+		487818B22B8CD1FB009CB413 /* ListColumnView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListColumnView.swift; sourceTree = "<group>"; };
+		48CE6EB82B8DD18800243E0F /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		48CE6EBC2B8DD20300243E0F /* TrelloServiceProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrelloServiceProtocol.swift; sourceTree = "<group>"; };
+		48CE6EBF2B8DD20D00243E0F /* trelloApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = trelloApp.swift; sourceTree = "<group>"; };
+		48CE6EC12B8DD21F00243E0F /* TrelloServiceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrelloServiceTests.swift; sourceTree = "<group>"; };
+		48CE6EC22B8DD21F00243E0F /* MockTrelloService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockTrelloService.swift; sourceTree = "<group>"; };
+		48CE6EC62B8DE35400243E0F /* boardResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = boardResponse.json; sourceTree = "<group>"; };
+		48CE6EC82B8DE36500243E0F /* listResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = listResponse.json; sourceTree = "<group>"; };
+		48CE6ECA2B8DE37800243E0F /* cardResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = cardResponse.json; sourceTree = "<group>"; };
+		48CE6ECC2B8DE3DC00243E0F /* Mockable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mockable.swift; sourceTree = "<group>"; };
+		48CE6ECE2B8DEA6D00243E0F /* trello.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = trello.xctestplan; sourceTree = "<group>"; };
+		48CE6ECF2B8DF4BB00243E0F /* BoardViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardViewModelTests.swift; sourceTree = "<group>"; };
+		48CE6ED12B8E054D00243E0F /* ListsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListsViewModelTests.swift; sourceTree = "<group>"; };
+		48CE6ED32B8E076000243E0F /* CardViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewModelTests.swift; sourceTree = "<group>"; };
+		48DF938D2B8F687B00A46085 /* AuthServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthServiceProtocol.swift; sourceTree = "<group>"; };
+		48DF938F2B8F699200A46085 /* MockAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAuthService.swift; sourceTree = "<group>"; };
+		48DF93912B8F6A4B00A46085 /* AuthViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModelTests.swift; sourceTree = "<group>"; };
+		48DF93932B8F6A7900A46085 /* TokenStorageProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenStorageProtocol.swift; sourceTree = "<group>"; };
+		48DF93952B8F6B8200A46085 /* MockTokenStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTokenStorage.swift; sourceTree = "<group>"; };
+		48DF93972B8F70EE00A46085 /* AuthServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthServiceTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +111,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				487818872B8CC487009CB413 /* KeychainAccess in Frameworks */,
+				487818842B8CC480009CB413 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,25 +120,32 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		487818662B8CC3D0009CB413 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				48DF93842B8F1BB200A46085 /* OHHTTPStubs in Frameworks */,
+				48DF93862B8F1BB200A46085 /* OHHTTPStubsSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		48487B702B90695300E2CAD7 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				48DF938F2B8F699200A46085 /* MockAuthService.swift */,
+				48487B6E2B90692700E2CAD7 /* MockAuthWebSession.swift */,
+				48CE6EC22B8DD21F00243E0F /* MockTrelloService.swift */,
+				48DF93952B8F6B8200A46085 /* MockTokenStorage.swift */,
+				48CE6ECC2B8DE3DC00243E0F /* Mockable.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
 		487818462B8CC3C9009CB413 = {
 			isa = PBXGroup;
 			children = (
+				48CE6ECE2B8DEA6D00243E0F /* trello.xctestplan */,
 				487818512B8CC3C9009CB413 /* trello */,
 				487818622B8CC3D0009CB413 /* trelloTests */,
-				4878186C2B8CC3D0009CB413 /* trelloUITests */,
 				487818502B8CC3C9009CB413 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -86,7 +155,6 @@
 			children = (
 				4878184F2B8CC3C9009CB413 /* trello.app */,
 				4878185F2B8CC3D0009CB413 /* trelloTests.xctest */,
-				487818692B8CC3D0009CB413 /* trelloUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -94,9 +162,15 @@
 		487818512B8CC3C9009CB413 /* trello */ = {
 			isa = PBXGroup;
 			children = (
-				487818522B8CC3C9009CB413 /* trelloApp.swift */,
-				487818542B8CC3C9009CB413 /* ContentView.swift */,
+				48CE6EBE2B8DD20D00243E0F /* App */,
+				487818AF2B8CCF66009CB413 /* Components */,
+				4878187C2B8CC446009CB413 /* Core */,
+				48CE6EBB2B8DD20300243E0F /* Protocols */,
+				4878187F2B8CC456009CB413 /* Utils */,
+				4878187E2B8CC452009CB413 /* Service */,
+				4878187D2B8CC44D009CB413 /* Model */,
 				487818562B8CC3CF009CB413 /* Assets.xcassets */,
+				487818AE2B8CC70B009CB413 /* Info.plist */,
 				487818582B8CC3CF009CB413 /* Preview Content */,
 			);
 			path = trello;
@@ -113,18 +187,193 @@
 		487818622B8CC3D0009CB413 /* trelloTests */ = {
 			isa = PBXGroup;
 			children = (
-				487818632B8CC3D0009CB413 /* trelloTests.swift */,
+				48487B702B90695300E2CAD7 /* Mocks */,
+				48CE6EC52B8DE33D00243E0F /* Json */,
+				48DF93972B8F70EE00A46085 /* AuthServiceTests.swift */,
+				48CE6EC12B8DD21F00243E0F /* TrelloServiceTests.swift */,
+				48CE6ECF2B8DF4BB00243E0F /* BoardViewModelTests.swift */,
+				48CE6ED12B8E054D00243E0F /* ListsViewModelTests.swift */,
+				48CE6ED32B8E076000243E0F /* CardViewModelTests.swift */,
+				48DF93912B8F6A4B00A46085 /* AuthViewModelTests.swift */,
 			);
 			path = trelloTests;
 			sourceTree = "<group>";
 		};
-		4878186C2B8CC3D0009CB413 /* trelloUITests */ = {
+		4878187C2B8CC446009CB413 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				4878186D2B8CC3D0009CB413 /* trelloUITests.swift */,
-				4878186F2B8CC3D0009CB413 /* trelloUITestsLaunchTests.swift */,
+				487818A72B8CC6CB009CB413 /* Card */,
+				4878189C2B8CC635009CB413 /* Lists */,
+				487818952B8CC5E0009CB413 /* Boards */,
+				4878188C2B8CC4C1009CB413 /* Authentication */,
 			);
-			path = trelloUITests;
+			path = Core;
+			sourceTree = "<group>";
+		};
+		4878187D2B8CC44D009CB413 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				487818932B8CC5D0009CB413 /* Board.swift */,
+				4878189D2B8CC640009CB413 /* Lists.swift */,
+				48CE6EB82B8DD18800243E0F /* Card.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4878187E2B8CC452009CB413 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				4878188A2B8CC4B7009CB413 /* AuthService.swift */,
+				4878189A2B8CC61E009CB413 /* TrelloService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		4878187F2B8CC456009CB413 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				487818802B8CC473009CB413 /* TokenStorage.swift */,
+				487818882B8CC49F009CB413 /* TrelloColors.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		4878188C2B8CC4C1009CB413 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				4878188E2B8CC4CA009CB413 /* ViewModel */,
+				4878188D2B8CC4C6009CB413 /* View */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		4878188D2B8CC4C6009CB413 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				487818912B8CC4F9009CB413 /* AuthView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4878188E2B8CC4CA009CB413 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				4878188F2B8CC4E5009CB413 /* AuthViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		487818952B8CC5E0009CB413 /* Boards */ = {
+			isa = PBXGroup;
+			children = (
+				487818972B8CC5EA009CB413 /* ViewModel */,
+				487818962B8CC5E5009CB413 /* View */,
+			);
+			path = Boards;
+			sourceTree = "<group>";
+		};
+		487818962B8CC5E5009CB413 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				487818A52B8CC6A5009CB413 /* BoardsView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		487818972B8CC5EA009CB413 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				487818982B8CC600009CB413 /* BoardViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		4878189C2B8CC635009CB413 /* Lists */ = {
+			isa = PBXGroup;
+			children = (
+				487818A02B8CC65A009CB413 /* ViewModel */,
+				4878189F2B8CC656009CB413 /* View */,
+			);
+			path = Lists;
+			sourceTree = "<group>";
+		};
+		4878189F2B8CC656009CB413 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				487818A12B8CC664009CB413 /* ListsView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		487818A02B8CC65A009CB413 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				487818A32B8CC67A009CB413 /* ListsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		487818A72B8CC6CB009CB413 /* Card */ = {
+			isa = PBXGroup;
+			children = (
+				487818A92B8CC6D4009CB413 /* ViewModel */,
+				487818A82B8CC6D0009CB413 /* View */,
+			);
+			path = Card;
+			sourceTree = "<group>";
+		};
+		487818A82B8CC6D0009CB413 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				487818AA2B8CC6E2009CB413 /* CardView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		487818A92B8CC6D4009CB413 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				487818AC2B8CC6EF009CB413 /* CardViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		487818AF2B8CCF66009CB413 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				487818B02B8CCF7D009CB413 /* CardRowView.swift */,
+				487818B22B8CD1FB009CB413 /* ListColumnView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		48CE6EBB2B8DD20300243E0F /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				48CE6EBC2B8DD20300243E0F /* TrelloServiceProtocol.swift */,
+				48DF938D2B8F687B00A46085 /* AuthServiceProtocol.swift */,
+				48DF93932B8F6A7900A46085 /* TokenStorageProtocol.swift */,
+				48487B6C2B90634600E2CAD7 /* WebAuthSessionProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		48CE6EBE2B8DD20D00243E0F /* App */ = {
+			isa = PBXGroup;
+			children = (
+				48CE6EBF2B8DD20D00243E0F /* trelloApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		48CE6EC52B8DE33D00243E0F /* Json */ = {
+			isa = PBXGroup;
+			children = (
+				48CE6EC62B8DE35400243E0F /* boardResponse.json */,
+				48CE6EC82B8DE36500243E0F /* listResponse.json */,
+				48CE6ECA2B8DE37800243E0F /* cardResponse.json */,
+			);
+			path = Json;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,6 +392,10 @@
 			dependencies = (
 			);
 			name = trello;
+			packageProductDependencies = (
+				487818832B8CC480009CB413 /* Alamofire */,
+				487818862B8CC487009CB413 /* KeychainAccess */,
+			);
 			productName = trello;
 			productReference = 4878184F2B8CC3C9009CB413 /* trello.app */;
 			productType = "com.apple.product-type.application";
@@ -161,27 +414,13 @@
 				487818612B8CC3D0009CB413 /* PBXTargetDependency */,
 			);
 			name = trelloTests;
+			packageProductDependencies = (
+				48DF93832B8F1BB200A46085 /* OHHTTPStubs */,
+				48DF93852B8F1BB200A46085 /* OHHTTPStubsSwift */,
+			);
 			productName = trelloTests;
 			productReference = 4878185F2B8CC3D0009CB413 /* trelloTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		487818682B8CC3D0009CB413 /* trelloUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 487818792B8CC3D0009CB413 /* Build configuration list for PBXNativeTarget "trelloUITests" */;
-			buildPhases = (
-				487818652B8CC3D0009CB413 /* Sources */,
-				487818662B8CC3D0009CB413 /* Frameworks */,
-				487818672B8CC3D0009CB413 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				4878186B2B8CC3D0009CB413 /* PBXTargetDependency */,
-			);
-			name = trelloUITests;
-			productName = trelloUITests;
-			productReference = 487818692B8CC3D0009CB413 /* trelloUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
@@ -200,10 +439,6 @@
 						CreatedOnToolsVersion = 15.2;
 						TestTargetID = 4878184E2B8CC3C9009CB413;
 					};
-					487818682B8CC3D0009CB413 = {
-						CreatedOnToolsVersion = 15.2;
-						TestTargetID = 4878184E2B8CC3C9009CB413;
-					};
 				};
 			};
 			buildConfigurationList = 4878184A2B8CC3C9009CB413 /* Build configuration list for PBXProject "trello" */;
@@ -215,13 +450,17 @@
 				Base,
 			);
 			mainGroup = 487818462B8CC3C9009CB413;
+			packageReferences = (
+				487818822B8CC480009CB413 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				487818852B8CC487009CB413 /* XCRemoteSwiftPackageReference "KeychainAccess" */,
+				48DF93822B8F1BB200A46085 /* XCRemoteSwiftPackageReference "OHHTTPStubs" */,
+			);
 			productRefGroup = 487818502B8CC3C9009CB413 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				4878184E2B8CC3C9009CB413 /* trello */,
 				4878185E2B8CC3D0009CB413 /* trelloTests */,
-				487818682B8CC3D0009CB413 /* trelloUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -240,13 +479,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		487818672B8CC3D0009CB413 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				48CE6EC92B8DE36500243E0F /* listResponse.json in Resources */,
+				48CE6EC72B8DE35400243E0F /* boardResponse.json in Resources */,
+				48CE6ECB2B8DE37800243E0F /* cardResponse.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,8 +492,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				487818552B8CC3C9009CB413 /* ContentView.swift in Sources */,
-				487818532B8CC3C9009CB413 /* trelloApp.swift in Sources */,
+				48CE6EBD2B8DD20300243E0F /* TrelloServiceProtocol.swift in Sources */,
+				48CE6EC02B8DD20E00243E0F /* trelloApp.swift in Sources */,
+				487818AB2B8CC6E2009CB413 /* CardView.swift in Sources */,
+				48CE6EB92B8DD18800243E0F /* Card.swift in Sources */,
+				487818922B8CC4F9009CB413 /* AuthView.swift in Sources */,
+				4878189E2B8CC640009CB413 /* Lists.swift in Sources */,
+				487818A42B8CC67A009CB413 /* ListsViewModel.swift in Sources */,
+				48487B6D2B90634600E2CAD7 /* WebAuthSessionProtocol.swift in Sources */,
+				487818A62B8CC6A6009CB413 /* BoardsView.swift in Sources */,
+				487818892B8CC49F009CB413 /* TrelloColors.swift in Sources */,
+				487818902B8CC4E5009CB413 /* AuthViewModel.swift in Sources */,
+				487818992B8CC600009CB413 /* BoardViewModel.swift in Sources */,
+				487818B32B8CD1FB009CB413 /* ListColumnView.swift in Sources */,
+				48DF93942B8F6A7900A46085 /* TokenStorageProtocol.swift in Sources */,
+				4878188B2B8CC4B7009CB413 /* AuthService.swift in Sources */,
+				48DF938E2B8F687B00A46085 /* AuthServiceProtocol.swift in Sources */,
+				487818B12B8CCF7D009CB413 /* CardRowView.swift in Sources */,
+				487818942B8CC5D0009CB413 /* Board.swift in Sources */,
+				4878189B2B8CC61E009CB413 /* TrelloService.swift in Sources */,
+				487818A22B8CC664009CB413 /* ListsView.swift in Sources */,
+				487818812B8CC473009CB413 /* TokenStorage.swift in Sources */,
+				487818AD2B8CC6EF009CB413 /* CardViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,16 +521,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				487818642B8CC3D0009CB413 /* trelloTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		487818652B8CC3D0009CB413 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				487818702B8CC3D0009CB413 /* trelloUITestsLaunchTests.swift in Sources */,
-				4878186E2B8CC3D0009CB413 /* trelloUITests.swift in Sources */,
+				48DF93902B8F699200A46085 /* MockAuthService.swift in Sources */,
+				48CE6EC32B8DD21F00243E0F /* TrelloServiceTests.swift in Sources */,
+				48CE6ED22B8E054D00243E0F /* ListsViewModelTests.swift in Sources */,
+				48CE6ED42B8E076000243E0F /* CardViewModelTests.swift in Sources */,
+				48DF93922B8F6A4B00A46085 /* AuthViewModelTests.swift in Sources */,
+				48DF93982B8F70EE00A46085 /* AuthServiceTests.swift in Sources */,
+				48CE6EC42B8DD21F00243E0F /* MockTrelloService.swift in Sources */,
+				48487B6F2B90692700E2CAD7 /* MockAuthWebSession.swift in Sources */,
+				48DF93962B8F6B8200A46085 /* MockTokenStorage.swift in Sources */,
+				48CE6ECD2B8DE3DC00243E0F /* Mockable.swift in Sources */,
+				48CE6ED02B8DF4BB00243E0F /* BoardViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,11 +542,6 @@
 			isa = PBXTargetDependency;
 			target = 4878184E2B8CC3C9009CB413 /* trello */;
 			targetProxy = 487818602B8CC3D0009CB413 /* PBXContainerItemProxy */;
-		};
-		4878186B2B8CC3D0009CB413 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 4878184E2B8CC3C9009CB413 /* trello */;
-			targetProxy = 4878186A2B8CC3D0009CB413 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -424,6 +675,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"trello/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = trello/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -452,6 +704,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"trello/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = trello/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -508,40 +761,6 @@
 			};
 			name = Release;
 		};
-		4878187A2B8CC3D0009CB413 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.gytisptasinskas.trelloUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = trello;
-			};
-			name = Debug;
-		};
-		4878187B2B8CC3D0009CB413 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.gytisptasinskas.trelloUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = trello;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -572,16 +791,57 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		487818792B8CC3D0009CB413 /* Build configuration list for PBXNativeTarget "trelloUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				4878187A2B8CC3D0009CB413 /* Debug */,
-				4878187B2B8CC3D0009CB413 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		487818822B8CC480009CB413 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.8.1;
+			};
+		};
+		487818852B8CC487009CB413 /* XCRemoteSwiftPackageReference "KeychainAccess" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kishikawakatsumi/KeychainAccess.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		48DF93822B8F1BB200A46085 /* XCRemoteSwiftPackageReference "OHHTTPStubs" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AliSoftware/OHHTTPStubs";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		487818832B8CC480009CB413 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 487818822B8CC480009CB413 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		487818862B8CC487009CB413 /* KeychainAccess */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 487818852B8CC487009CB413 /* XCRemoteSwiftPackageReference "KeychainAccess" */;
+			productName = KeychainAccess;
+		};
+		48DF93832B8F1BB200A46085 /* OHHTTPStubs */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 48DF93822B8F1BB200A46085 /* XCRemoteSwiftPackageReference "OHHTTPStubs" */;
+			productName = OHHTTPStubs;
+		};
+		48DF93852B8F1BB200A46085 /* OHHTTPStubsSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 48DF93822B8F1BB200A46085 /* XCRemoteSwiftPackageReference "OHHTTPStubs" */;
+			productName = OHHTTPStubsSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 487818472B8CC3C9009CB413 /* Project object */;
 }
